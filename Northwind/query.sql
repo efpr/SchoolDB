@@ -53,6 +53,15 @@ select round(avg(unit_price),3) as "Preço Médio" from order_details;
 --22.
 select city, count(employee_id) from employees group by city;
 
+--24.
+select "Empresa", "Total de Encomendas" from(
+
+select company_name as "Empresa", count(order_id) as "Total de Encomendas" from customers inner join orders on orders.customer_id = customers.customer_id
+ group by company_name
+ ) where "Total de Encomendas" > 15 order by "Total de Encomendas" DESC;
+ 
+
+
 2.
 
 select contact_name as nome, company_name as "empresa", contact_title as "title", phone as "telefone"
