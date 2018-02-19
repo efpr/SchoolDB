@@ -79,10 +79,10 @@ from EMPLOYEES
 where title_of_courtesy = 'Mrs.' or title_of_courtesy = 'Ms.';
 
 14.
-select firstname as "nome proprio", lastname as "apelido"
+select firstname as "nome proprio", 
+        lastname as "apelido"
 from EMPLOYEES
-where CITY = 'Seatle' or city = 'Redmond';
---a confirmar
+where title = 'Sales Representative' and (CITY = 'Seattle' or city = 'Redmond');
 
 15.
 select firstname as "nome proprio", lastname as "apelido", city as "cidade", EMPLOYEE_ID as "id"
