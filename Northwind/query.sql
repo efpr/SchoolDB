@@ -44,6 +44,15 @@ select order_id as "Código da encomenda", freight as "Custos dos Portes",
         (freight*1.1) as "Total dos Portes"
 from orders where freight>=500;
 
+--19.
+select sum(QUANTITY) as "Total de encomendas" from order_details where product_id =3;
+
+--21.
+select round(avg(unit_price),3) as "Preço Médio" from order_details;
+
+--22.
+select city, count(employee_id) from employees group by city;
+
 2.
 
 select contact_name as nome, company_name as "empresa", contact_title as "title", phone as "telefone"
