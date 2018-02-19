@@ -85,9 +85,10 @@ from EMPLOYEES
 where title = 'Sales Representative' and (CITY = 'Seattle' or city = 'Redmond');
 
 15.
-select firstname as "nome proprio", lastname as "apelido", city as "cidade", EMPLOYEE_ID as "id"
+select firstname as "nome proprio", 
+        lastname as "apelido", city as "cidade", EMPLOYEE_ID as "id"
 from EMPLOYEES
-where CITY = 'Seatle' or city = 'Redmond';
+where title = 'Sales Representative' and (CITY = 'Seattle' or city = 'Redmond');
 
 16.
 select CONCAT(firstname, lastname) as "nome completo"
